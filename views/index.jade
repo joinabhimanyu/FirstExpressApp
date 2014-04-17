@@ -1,0 +1,32 @@
+
+doctype html
+html
+	head
+		title Home Page
+		link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		script(type='text/javascript', src='js/bootstrap.min.js')
+		script(type='text/javascript', src='js/jquery-1.10.2.min.js')
+
+	body
+		.container
+		.row.well(style='padding-left:50px;')
+			.row(style='padding-top:5px;')
+				p.lead
+					| This is the Home Page
+
+			.row(style='padding-top:5px;')
+				ul.list-inline
+					li
+						a(href='/')
+							span.label.label-primary Home
+					li
+						a(href='/xamarin')
+							span.label.label-primary Xamarin
+					li
+						a(href='/phonegap')
+							span.label.label-primary PhoneGap
+
+
+			.row(style='padding-top:8px;')
+				img(src='https://evolve.xamarin.com/images/logo.png',alt='No image found')

@@ -1,0 +1,32 @@
+
+doctype html
+html
+	head
+		link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		script(type='text/javascript', src='js/bootstrap.min.js')
+		script(type='text/javascript', src='js/jquery-1.10.2.min.js')
+	
+	body
+		.container
+		.row.well(style='padding-left:50px;')
+			.row(style='padding-top:5px;')
+				.well
+					p.lead This is xamarin view
+
+			.row(style='padding-top:5px;')
+
+				.col-md-6
+					.jumbotron
+						h2 Big Buck Bunny
+						video(width='300', height='240', controls, preload='auto')
+							source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+							source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+							source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+							| The video isn't supported on your browser
+
+				.col-md-6
+					.thumbnail
+						img(src='images/xam.png', alt='No image displayed', style='width: 500px; height: 400px;')
+
+				
