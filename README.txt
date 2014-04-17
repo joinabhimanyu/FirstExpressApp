@@ -1,0 +1,1 @@
+This is an Express Server with Routing and Api. Front-End is implemented using AngularJS with Jade, SaaS and Compass. Back-End is implemented using NodeJS.
