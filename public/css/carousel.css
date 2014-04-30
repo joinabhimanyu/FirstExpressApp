@@ -1,0 +1,481 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Masthead Navigation links */
+
+.masthead-nav {
+     padding-right: 0;
+     padding-left: 0;
+     font-size: 16px;
+     font-weight: bold;
+     color: #fff; /* IE8 proofing */
+     color: rgba(255,255,255,.75);
+     border-bottom: 2px solid transparent;
+}
+
+.masthead-nav:hover, .masthead-nav:focus {
+    background-color: transparent;
+    border-bottom-color: rgba(255,255,255,.25);
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: rgb(16, 15, 15);
+}
+
+.carousel .item.third-item {
+    background-image:url('http://xamarin.com/images/xamarin.mac/touchdraw-on-osx.jpg');
+    background-position:right;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+}
+
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+.carousel-caption h1, .carousel-caption p{
+    color:whitesmoke;
+}
+
+
+.carousel-caption .iframe-container {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.carousel-caption .iframe-container iframe, .carousel-caption .iframe-container object, .carousel-caption .iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+  margin-top:10px;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.marketing .image {
+     width:140px;
+     height:140px;
+     display:table;
+     border-radius:100%;
+     box-shadow:0 3px 15px rgba(0, 0, 0, 0.1);
+     vertical-align:middle;
+}
+
+.marketing .image img {
+    width:140px;
+    height:140px;
+}
+
+.marketing p.lead {
+    font-size:1.3em;
+}
+
+.marketing #image-container {
+    margin-left:120px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-size: 50px;
+}
+
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+
+.content.double-padding {
+    padding:53px -20px;
+}
+
+.addon-image {
+     -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     transition: all 0.3s linear;
+     position:absolute;
+     margin-top:136px;
+     margin-left:187px;
+}
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .marketing .img-circle {
+      -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     transition: all 0.3s linear;
+  }
+
+  .marketing .img-circle:hover {
+      box-shadow: 5px 5px 5px #888888;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left:  15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left:  0;
+    border-radius: 4px;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+
+.centered {
+    text-align:center;
+}
+
+h1.double-header {
+    font-family: "Segoe UI Light", "Helvetica Neue", Arial, sans-serif;
+    text-shadow: none;
+    font-size: 50px;
+    font-weight: lighter;
+    -webkit-font-smoothing: antialiased;
+}
+
+p.feature {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #3498db;
+    font-size: 25px;
+}
+
+.rich-fragment {
+    color: #3d3d3d;
+    font-size: 14px;
+}
+
+.content.alternate-bg {
+    background: #f4f4f4;
+}
+
+
+
+
+div {
+    display:block;
+}
+
+.top-spacing {
+    margin-top: 20px !important;
+}
+
+.action-button.featured {
+    border-color: #5b7d3c;
+    background: linear-gradient(#90d351, #599e43);
+    color:#fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    display:inline-block;
+    padding: 10px 20px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: normal;
+    cursor:pointer;
+}
+
+.content-wrapper {
+    width:1100px;
+    margin:auto;
+}
+
+p.lead.small {
+    padding-top:30px;
+    font-size:1.1em;
+}
+
+#global-footer {
+    opacity: 0.8;
+    width: 1100px;
+    -webkit-transition: 200ms opacity ease-in-out;
+    transition:200ms opacity ease-in-out;
+    margin-top: 35px !important;
+    margin-left:auto;
+    margin-right:auto;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 30px 35px 0;
+    border-top: 1px solid #bbb;
+}
+
+#global-footer aside {
+    width: 220px;
+    float: left;
+    line-height: 1.5;
+    font-size: 12px;
+    color: #666;
+    display:block;
+}
+
+#global-footer aside h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin:0;
+    padding:0;
+    border:0;
+    font-style:normal;
+    font-family:inherit;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.tel {
+    background-position: top left;
+    background-image: url("http://xamarin.com/images/footer-contact-icons.png");
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.email {
+    background-position: bottom left;
+    background-image: url("http://xamarin.com/images/footer-contact-icons.png");
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.copyright a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+#global-footer aside .contact {
+    margin-top: 15px;
+}
+#global-footer aside .contact .hidden {
+    display: none;
+}
+
+#global-footer aside .contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#global-footer nav {
+    width: 810px;
+    float:left;
+    display:block;
+}
+
+#global-footer ul {
+    list-style:none;
+    line-height:1.5;
+}
+
+#global-footer nav ul li {
+    width: 200px;
+    display:block;
+    float:left;
+    margin-right:0px;
+}
+
+#global-footer nav ul li h3 {
+    font-weight: bold;
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 0.4em;
+}
+
+#global-footer nav ul li ul {
+    margin-left:-38px;
+}
+
+#global-footer nav ul li li {
+    margin-bottom: 0.1em;
+}
+
+#global-footer nav ul li li a {
+    text-decoration: none;
+    color: #666;
+}
+
+#global-footer nav ul li.social-networks {
+    float: left;
+    width: 141px;
+    margin-right: -15px;
+}
+
+#global-footer nav ul li.social-networks ul {
+    margin-left:-50px;
+    margin-top: 0.6em;
+}
+
+
+#global-footer nav ul li.social-networks li {
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    color: transparent;
+    float: left;
+    margin-right: 9px;
+    margin-bottom: 10px;
+    border: 3px solid transparent;
+    border-radius: 100%;
+}
+
+#global-footer nav ul li.social-networks li a.twitter {
+    background-position: -47px 0;
+}
+
+#global-footer nav ul li.social-networks li a.facebook {
+    background-position: 0 0;
+}
+
+#global-footer nav ul li.social-networks li a.googleplus {
+    background-position: -94px 0;
+}
+
+#global-footer nav ul li.social-networks li a.github {
+    background-position: 0 -44px;
+}
+
+#global-footer nav ul li.social-networks li a.youtube {
+    background-position: -47px -44px;
+}
+
+#global-footer nav ul li.social-networks li a.uservoice {
+    background-position: -94px -44px;
+}
+
+#global-footer nav ul li.social-networks li a {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url("http://xamarin.com/images/social-network-icons.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+}

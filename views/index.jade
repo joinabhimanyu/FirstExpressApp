@@ -1,32 +1,53 @@
 
 doctype html
-html
+html(lang="en")
 	head
-		title Home Page
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible')
+		meta(name='viewport')
+		meta(content='width=device-width, initial-scale=1.0')
+
+		title #{title}
 		link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
-		link(rel='stylesheet', type='text/css', href='css/style.css')
+		link(rel='stylesheet', type='text/css', href='css/cover.css')
 		script(type='text/javascript', src='js/bootstrap.min.js')
 		script(type='text/javascript', src='js/jquery-1.10.2.min.js')
+		style#holderjs-style(type='text/css')
 
 	body
-		.container
-		.row.well(style='padding-left:50px;')
-			.row(style='padding-top:5px;')
-				p.lead
-					| This is the Home Page
+	
+		.site-wrapper
+			.site-wrapper-inner
+				.cover-container
+					.masthead.clearfix
+						
+						.inner
+							h3.masthead-brand Visual Studio
 
-			.row(style='padding-top:5px;')
-				ul.list-inline
-					li
-						a(href='/')
-							span.label.label-primary Home
-					li
-						a(href='/xamarin')
-							span.label.label-primary Xamarin
-					li
-						a(href='/phonegap')
-							span.label.label-primary PhoneGap
+							ul.nav.masthead-nav
+								
+								li.active
+									a(href='/') Home
 
+								li
+									a(href='/xamarin') Xamarin
 
-			.row(style='padding-top:8px;')
-				img(src='https://evolve.xamarin.com/images/logo.png',alt='No image found')
+								li
+									a(href='/phonegap') PhoneGap
+								
+						
+
+					.inner.cover
+						h1.cover-heading Visual Studio Add-ins
+
+						p.lead
+							| Visual Studio add ins are a very quick and easy way to extend the functionality of Visual Studio. They provide a quick and easy way to get your functionality out there.
+
+						p.lead
+							a.btn.btn-lg.btn-default(href='/') Learn more
+
+					.mastfoot
+						.inner
+							p Cover template for 
+								a(href='http://getbootstrap.com') Bootstrap , by 
+								a(href='http://twitter.com/mdo') @mdo .

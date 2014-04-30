@@ -19,17 +19,17 @@ app.configure(function () {
 });
 
 app.get('/', function (req, res) {
-    res.render('index');
+    res.render('index', { title: 'Home Page' });
 });
 
 app.get("/xamarin", function (req, res) {
     //res.send('This is the xamarin page');
-    res.render('xam_view');
+    res.render('xam_view', { title: 'Xamarin Page' });
 });
 
 app.get("/phonegap", function (req, res) {
     //res.send('This is the phonegap page');
-    res.render('gap_view');
+    res.render('gap_view', { title: 'Phonegap Page' });
 });
 
 app.listen(process.env.PORT || 8080, function () {

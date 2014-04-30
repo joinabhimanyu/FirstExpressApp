@@ -2,31 +2,426 @@
 doctype html
 html
 	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible')
+		meta(name='viewport')
+		meta(content='width=device-width, initial-scale=1.0')
+
+		title #{title}
 		link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
-		link(rel='stylesheet', type='text/css', href='css/style.css')
-		script(type='text/javascript', src='js/bootstrap.min.js')
-		script(type='text/javascript', src='js/jquery-1.10.2.min.js')
+		link(rel='stylesheet', type='text/css', href='css/carousel.css')
+		script(src='js/jquery-1.10.2.min.js')
+		script(src='js/bootstrap.min.js')
+		style#holderjs-style(type='text/css')
 	
 	body
-		.container
-		.row.well(style='padding-left:50px;')
-			.row(style='padding-top:5px;')
-				.well
-					p.lead This is xamarin view
+		
 
-			.row(style='padding-top:5px;')
+		script.
+			$(document).ready(function() {
+				$('.carousel').carousel({
+					interval: 2000
+				})
+			})
+
+
+
+		.navbar-wrapper
+			.container
+				.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+					.container
+						.navbar-header
+							button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+
+							a.navbar-brand(href='/xamarin') Xamarin
+
+						.navbar-collapse.collapse
+							ul.nav.navbar-nav
+								li
+									a.masthead-nav(href='/') Home						 
+
+								li
+									a.masthead-nav(href='/phonegap') PhoneGap
+
+
+		#myCarousel.carousel.slide(data-ride='carousel')
+			ol.carousel-indicators
+				li(data-target='#myCarousel', data-slide-to='0')
+				li.active(data-target='#myCarousel', data-slide-to='1')
+				li(data-target='#myCarousel', data-slide-to='2')
+
+			.carousel-inner
+				.item.second-item
+					img(alt='First slide', data-src='holder.js/900x500/auto/#777:#7a7a7a/text:First slide' src='')
+
+					.container
+						.carousel-caption
+							h1 Create Native iOS, Android, Mac and Windows apps in C#
+
+							p
+								| Xamarin.iOS and Xamarin.Android make it possible to do native iOS, Android and Windows development in C#, with either Xamarin Studio or Visual Studio. 
+
+							p
+								a.btn.btn-lg.btn-primary(role='button', href='#') Sign up today
+
+				.item.active.first-item
+					img(alt='Second slide', data-src='holder.js/900x500/auto/#666:#6a6a6a/text:Second slide', src='')
+
+					.container
+						.carousel-caption
+							h1 Xamarin for Visual Studio
+
+							p
+								| Xamarin claims to be the only IDE that allows for native iOS, Android and Windows app development within Microsoft Visual Studio.
+
+							p
+								a.btn.btn-lg.btn-primary(role='button', href='#') Learn more
+
+
+				.item.third-item
+					img(alt='Third slide', data-src='holder.js/900x500/auto/#555:#5a5a5a/text:Third slide', src='')
+
+					.container
+						.carousel-caption
+							h1 Xamarin Studio
+
+							.iframe-container
+								iframe(src='http://www.youtube.com/embed/6X3zUh8RqbY&vq=hd720&vq=hd1080', allowtransparency='false', allowfullscreen, frameborder='0', scrolling='no', width='532', height='400')
+
+
+								
+
+			a.left.carousel-control(href='#myCarousel', data-slide='prev')
+				span.glyphicon.glyphicon-chevron-left 
+
+			a.right.carousel-control(href='#myCarousel', data-slide='next')
+				span.glyphicon.glyphicon-chevron-right 
+
+		.container.marketing
+			.row
+				.col-lg-4
+					#image-container
+						.image
+							img.img-circle(alt='140 x 140', data-src='holder.js/140x140', src='http://xamarin.com/images/index/ide-xamarin-studio.png')
+
+					h2 Extend your Reach to 2.5 Billion Devices
+
+					p.lead
+						| Xamarin makes it possible for your team to build native and hybrid apps for iOS, Android, Mac and Windows using a single C# code base.
+
+
+					p
+						a.btn.btn-default(role='button', href='/') View details
+
+
+				.col-lg-4
+					#image-container
+						.image
+							img.img-circle(alt='140 x 140', data-src='holder.js/140x140', src='http://xamarin.com/images/index/ide-visual-studio.png')
+
+					h2 Proven Enterprise Success
+
+					p.lead
+						| Xamarin's architectural approach provides completely native UIs with better performance than other cross-platform techniques.
+
+
+					p
+						a.btn.btn-default(role='button', href='/') View details
+
+
+				.col-lg-4
+					#image-container
+						.image
+							img.img-circle(alt='140 x 140', data-src='holder.js/140x140', src='images/xam-logo.png')
+
+					h2 Integration with Enterprise Systems
+
+					p.lead
+						| Xamarin enables developers to create native mobile apps capable of easily leveraging the rich functionality and enterprise data exposed by the SAP Mobile Platform.
+
+
+					p
+						a.btn.btn-default(role='button', href='/') View details
+
+
+			h3.featurette-divider
+
+			.content.double-padding
+				.content-wrapper
+					.centered
+						h1.double-header Write C#. Run on 2.5 Billion Devices.
+
+						img.top-gap(src='http://xamarin.com/images/index/devices-list.png', style='margin-top:20px;', width='940', height='160', data-retina)
+
+						p.feature.top-spacing(style='margin-top:20px;')
+							| With Xamarin you write your apps entirely in C#, sharing the
+							br
+							| same code on iOS, Android, Windows and Mac.
+
+						.rich-fragment.top-spacing(style='margin-top:20px;')
+							p
+								| Reuse your favourite .Net Libraries, and still easily incorporate platform-specific libraries and frameworks when you want to.
+
+
+
+			h3.featurette-divider
+
+
+			.row.featurette
+				.col-md-5(style='margin-top:80px;')
+					h2.featurette-heading
+						| Create beautiful, fast, native mobile apps.
+						span.text-muted It'll blow your mind.
+
+					p.lead
+						| Xamarin delivers high performance compiled code with full access to all the native APIs so you can create native apps with device-specific experiences. Anything you can do in Objective-C or Java, you can do in C# with Xamarin.
+
+
+				.col-md-7
+					img.img-responsive.pull-right(style='padding-top:110px;', alt='500 x 500', src='https://xamarin.com/images/index/ipad.png')
+					img.addon-image.img-responsive.pull-right(alt='500 x 500', data-src='holder.js/500x500/auto', src='http://xamarin.com/images/index/screenshots/k-c.jpg')
+
+
+			h3.featurette-divider
+
+
+			.row.featurette(style='margin-top:80px;')
+				.col-md-7
+					img.featurette-image.img-responsive(alt='500 x 500', data-src='holder.js/500x500/auto', src='http://xamarin.com/images/msdn/visual-studio.png')
+
+
+				.col-md-5
+					h2.featurette-heading
+						| You've got ideas. We've got IDEs.
+						span.text-muted Oh yeah, it's that good.
+
+					p.lead
+						| Use Xamarin with Visual Studio, or try Xamarin Studio, our free, world-class development environment for cross-platform mobile apps. Available on Windows and Mac.
+
+
+			h3.featurette-divider
+
+
+			.row.featurette(style='margin-top:80px;')
+				.col-md-7
+					h2.featurette-heading You're in good company.
+
+					p.lead
+						| Over 500,000 developers are already using Xamarin to create amazing apps. Xamarin accelerates app development and reduces costs through reuse and sharing of your existing .NET code. Use our new .NET Mobility Scanner to see exactly how much your existing code is mobile ready immediately for iOS, Android, Windows Phone and Windows Store, and get a detailed roadmap of the remaining work required to mobilize an existing app.
+
+				.col-md-5
+					img.featurette-image.img-responsive(alt='500 x 500', data-src='holder.js/500x500/auto', src='http://xamarin.com/images/index/screenshots/rdio.jpg')
+
+
+			h3.featurette-divider
+
+			.row(style='margin-top:80px;')
+				.content-wrapper
+					h1.centered.double-header What experts are saying about Xamarin
+
+			.row
+				.col-md-6
+					.row
+						p.lead.small
+							| Xamarin offers the best of all worlds.  We deliver high performance, native apps that, until Xamarin, were only possible with Objective-C and Java. Sharing over 50,000 lines of code across platforms gives us more time to spend on great user experiences.
+
+					.row
+						.author
+								img.img-circle(src='http://xamarin.com/images/msdn/quote-matt-crocker.jpg', data-retina, width='60', height='60')
+
+								span.name(style='padding-left:5px;') Matt Crocker
+								br(style='margin-top:6px;')
+								em Director of Client Engeneering, Rdio
+
 
 				.col-md-6
-					.jumbotron
-						h2 Big Buck Bunny
-						video(width='300', height='240', controls, preload='auto')
-							source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
-							source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
-							source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
-							| The video isn't supported on your browser
+					.row
+						p.lead.small
+							| Xamarin's platform enabled our engineering team to become native mobile developers almost overnight, eliminating the expense of hiring scarce, expensive platform-specific developers.
+
+					.row
+						.author
+								img.img-circle(src='http://xamarin.com/images/msdn/quote-david-fuller.jpg', data-retina, width='60', height='60')
+
+								span.name(style='padding-left:5px;') David Fuller
+								br(style='margin-top:6px;')
+								em Vice President of software R&D, National Instruments
+
+
+			.row
+				.col-md-6
+					.row
+						p.lead.small
+							| Xamarin's architectural approach provides completely native UIs with better performance than other cross-platform techniques... Xamarin uses multifaceted technology built by a cohesive team with a solid long-term track record.
+
+					.row
+						.author
+								img.img-circle(src='http://xamarin.com/images/msdn/quote-gartner.png', data-retina, width='60', height='60')
+
+								span.name(style='padding-left:5px;') Gartner
+								br(style='margin-top:6px;')
+								em Magic Quadrant for Mobile Application Development Platforms
+
 
 				.col-md-6
-					.thumbnail
-						img(src='images/xam.png', alt='No image displayed', style='width: 500px; height: 400px;')
+					.row
+						p.lead.small
+							| The broad collaboration between Microsoft and Xamarin is targeted at supporting developers interested in extending their applications across multiple devices. With Xamarin, developers combine all of the productivity benefits of C#, Visual Studio 2013 and Windows Azure with the flexibility to quickly build for multiple device targets.
 
-				
+					.row
+						.author
+								img.img-circle(src='http://xamarin.com/images/msdn/quote-somasegar.jpg', data-retina, width='60', height='60')
+
+								span.name(style='padding-left:5px;') S. Somasegar
+								br(style='margin-top:6px;')
+								em Corporate Vice President, Microsoft Corporation
+
+
+			h3.featurette-divider
+			
+
+			.content.double-padding
+				.content-wrapper.centered
+					h1.centered.double-header Get Started Today
+
+					.top-spacing
+						a.action-button.featured(href='#') Download Now
+					
+
+
+			h3.featurette-divider
+
+
+			footer#global-footer
+				aside
+					h3
+						a(href='http://xamarin.com')
+							img(src='http://xamarin.com/images/xamarin-footer-logo.png', alt='Xamarin', width='75', height='16', data-retina)
+
+					.copyright
+						| @ 2014 Xamarin Inc.
+						br
+						a(href='http://xamarin.com/legal') Legal
+
+					.contact.vcard
+						.org-hidden Xamarin Inc.
+						a.url.hidden(href='http://xamarin.com') xamarin.com
+						Contact Sales:
+						br
+						span.tel +1 (855) 926-2746
+						br
+						a.email(href='mailto:hello@xamarin.com') hello@xamarin.com
+
+				nav
+					ul
+						li
+							h3 Produts
+
+							ul
+								li
+									a(href='http://xamarin.com/ios') Xamarin.iOS
+
+								li
+									a(href='http://xamarin.com/android') Xamarin.Android
+
+								li
+									a(href='http://xamarin.com/mac') Xamarin.Mac
+
+								li
+									a(href='http://xamarin.com/studio') Xamarin Studio
+
+								li
+									a(href='http://xamarin.com/test-cloud') Test Cloud
+
+								li
+									a(href='http://xamarin.com/visual-studio') Visual Studio Extension
+
+
+
+						li
+							h3 The Company
+
+							ul
+								li
+									a(href='http://xamarin.com/about') About Us
+
+								li
+									a(href='http://xamarin.com/support') Support
+
+								li
+									a(href='http://xamarin.com/resources/webinars') Resources
+
+								li
+									a(href='http://xamarin.com/consulting-partners') Partners
+
+								li
+									a(href='http://xamarin.com/products') Products
+
+								li
+									a(href='http://xamarin.com/tour') Take a tour
+
+
+						li
+							h3 Developer Center
+
+							ul
+								li
+									a(href='http://docs.xamarin.com') Get Started
+
+								li
+									a(href='http://docs.xamarin.com/guides') Guides
+
+								li
+									a(href='http://docs.xamarin.com/recipes') Recipes
+
+								li
+									a(href='http://docs.xamarin.com/') API Reference
+
+								li
+									a(href='http://docs.xamarin.com/samples-all') Sample Apps
+
+								li
+									a(href='http://forums.xamarin.com') Forums
+
+								li
+									a(href='http://planet.xamarin.com') Community Blogs
+
+								li
+									a(href='http://components.xamarin.com') Components
+
+								li
+									a(href='http://xamarin.com/university') Training
+
+								li
+									a(href='http://docs.xamarin.com/videos') Videos
+
+
+
+						li.social-networks
+							h3 Elsewhere
+
+							ul
+								li
+									a.twitter#Twitter(href='https://twitter.com/xamarinhq')
+
+								li
+									a.facebook#Facebook(href='https://twitter.com/xamarinhq')
+
+								li
+									a.googleplus#Google(href='https://twitter.com/xamarinhq')
+
+								li
+									a.github#Github(href='https://twitter.com/xamarinhq')
+
+								li
+									a.youtube#Youtube(href='https://twitter.com/xamarinhq')
+
+								li
+									a.uservoice#UserVoice(href='https://twitter.com/xamarinhq')
+
+
+			
