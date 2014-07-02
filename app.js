@@ -29,7 +29,8 @@ app.get("/xamarin", function (req, res) {
 
 app.get("/phonegap", function (req, res) {
     //res.send('This is the phonegap page');
-    res.render('gap_view', { title: 'Phonegap Page' });
+    //res.render('gap_view', { title: 'Phonegap Page' });
+    res.sendfile('./public/AngularFireDemo.html');
 });
 
 app.listen(process.env.PORT || 8080, function () {
