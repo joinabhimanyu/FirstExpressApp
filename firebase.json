@@ -1,6 +1,6 @@
 {
   "firebase": "burning-fire-3282",
-  "public": "./public",
+  "public": ".",
   "ignore": [
     "firebase.json",
     ".*",
